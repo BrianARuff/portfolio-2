@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import {Route} from "react-router-dom";
+import Header from "./components/Header"
+import "./styles/App.scss"
+import Body from "./components/Body"
+import Footer from "./components/Footer"
+import FlexLayout from "./components/FlexLayout"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-background">
+    <Header />
+    <Route path="/" render={(props) => {
+      return (
+        <FlexLayout {...props}>
+          <Body />
+        </FlexLayout>
+      )
+    }}></Route>
+    <Footer />
     </div>
   );
 }
