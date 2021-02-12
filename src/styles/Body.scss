@@ -1,19 +1,20 @@
 .main-body {
   min-height: 80vh;
   flex: 0 0 100%;
+  position: relative;
 }
 
 .main-body-title {
   padding: 2rem;
   transform-origin: left;
-  transform: rotate(7deg);
-  -webkit-transform: rotate(7deg);
-  -moz-transform: rotate(7deg);
-  -ms-transform: rotate(7deg);
-  -o-transform: rotate(7deg);
+  transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
   position: relative;
-  left: 100px;
-  bottom: 14px;
+  left: 4rem;
+  top: 0.5rem;
 }
 
 .bri {
@@ -25,7 +26,7 @@
   -o-transform: rotate(-10deg);
   display: inline-block;
   position: relative;
-  top: 6px;
+  top: 0.35rem;
 }
 
 .coding {
@@ -37,5 +38,16 @@
   -ms-transform: rotate(5deg);
   -o-transform: rotate(5deg);
   position: relative;
-  top: 3px;
+  top: 0.2rem;
+}
+
+@media screen and (max-width: 425px) {
+  .main-body-title {
+    top: 10rem;
+    transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+  }
 }
