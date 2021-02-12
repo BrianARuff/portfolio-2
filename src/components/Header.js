@@ -1,6 +1,5 @@
 import "../styles/Header.scss"
 import imageOfPeach from "../images/peach.svg"
-import imageOfMe from "../images/brian-72x72.jpg"
 import { Link } from "react-router-dom"
 
 const Header = (props) => {
