@@ -41,9 +41,23 @@
   top: 0.2rem;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (min-width: 1px) and (max-width: 425px) {
   .main-body-title {
-    top: 10rem;
+    top: 5rem;
+    left: 0rem;
+    transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+    -moz-transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    -o-transform: rotate(7deg);
+    font-size: medium;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .main-body-title {
+    top: 0.25em;
+    left: 3rem;
     transform: rotate(4deg);
     -webkit-transform: rotate(4deg);
     -moz-transform: rotate(4deg);
