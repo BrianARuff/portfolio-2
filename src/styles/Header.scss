@@ -10,14 +10,23 @@ header {
   }
   ul {
     display: grid;
-    justify-content: center;
     align-items: center;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    .gi-1 {
+      position: relative;
+      .pic-of-me {
+        position: absolute;
+        top: 75px;
+        left: 60px;
+      }
+    }
     li {
       list-style-type: none;
       a {
         color: #f8f1f1;
+        font-size: 2rem;
+        text-decoration: none;
       }
       img {
         border-radius: 50%;
@@ -30,6 +39,9 @@ header {
       justify-content: center;
       align-items: center;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      li a {
+        font-size: 1rem;
+      }
       .gi-1 {
         display: none;
       }

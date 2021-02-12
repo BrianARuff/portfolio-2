@@ -23,14 +23,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #f8f1f1;
-  background: linear-gradient(
-    140deg,
-    #264653 0%,
-    #2a9d8f 20%,
-    #e9c46a 40%,
-    #f4a261 60%,
-    #e76f51 80%
-  );
+  background-color: #eeb266;
+  background: url("./images/peach.png") #404f73 no-repeat;
+  background-position: center;
 }
 
 code {

@@ -7,7 +7,7 @@ import FlexLayout from "./components/FlexLayout"
 
 function App() {
   return (
-    <div className="main-background">
+    <div  className="main-background">
     <Header />
     <Route path="/" render={(props) => {
       return (
