@@ -1,5 +1,4 @@
 .main-body {
-  min-height: 80vh;
   flex: 0 0 100%;
   background-color: #404f73;
   display: flex;
@@ -7,6 +6,7 @@
   flex-wrap: nowrap;
   align-items: center;
   padding-top: 40px;
+  min-height: 80vh;
 }
 
 .main-body-title {
