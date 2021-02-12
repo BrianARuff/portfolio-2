@@ -4,12 +4,13 @@ import { Link } from "react-router-dom"
 
 const Header = (props) => {
   return (
-    <header className={`header`}>
+    <header>
       <ul className={`header-flex-box`}>
-        <li><img src={imageOfMe} alt=""/></li>
-        <li><Link className="text-off-white" to={`/about-me`}>About Me</Link></li>
-        <li><Link className="text-off-white" to={`/projects`}>Projects</Link></li>
-        <li><Link className="text-off-white" to={`/resume`}>Resum&eacute;</Link></li>
+        <li className={`gi-1`}><Link to={`/`}><img src={imageOfMe} alt=""/></Link></li>
+        <li className={`gi-2`}><Link className="text-off-white" to={`/about-me`}>About</Link></li>
+        <li className={`gi-3`}><Link className="text-off-white" to={`/projects`}>Projects</Link></li>
+        <li className={`gi-4`}><Link className="text-off-white" to={`/resume`}>Resum&eacute;</Link></li>
+        <li className={`gi-5`}><a href="https://github.com/brianaruff" target="_blank" rel="noreferrer">GitHub</a></li>
       </ul>
 
     </header>
