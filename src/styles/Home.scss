@@ -1,12 +1,10 @@
 .main-body {
   flex: 0 0 100%;
-  background-color: #404f73;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   padding-top: 40px;
-  min-height: 80vh;
 }
 
 .main-body-title {
@@ -33,4 +31,18 @@
   position: relative;
   top: 25px;
   border: 3px solid #404f73;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7.65rem 0;
+}
+
+.essentials {
+  background: url("../images/essential.png") no-repeat center center;
+  background-size: contain;
+  height: 375px;
+  width: 860px;
 }

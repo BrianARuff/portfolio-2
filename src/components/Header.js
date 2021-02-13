@@ -3,6 +3,9 @@ import imageOfPeach from "../images/peach.svg"
 import { Link } from "react-router-dom"
 
 const Header = (props) => {
+  const switchLink = (link) => {
+    const path = props.history.pathname
+  }
   return (
     <header>
       <ul className={`header-flex-box`}>
