@@ -44,5 +44,29 @@
   background: url("../images/essential.png") no-repeat center center;
   background-size: contain;
   height: 375px;
-  width: 860px;
+  width: 876px;
+}
+
+@media screen and (max-width: 768px) {
+  .essentials {
+    width: 600px;
+  }
+
+  @media screen and (max-width: 425px) {
+    .essentials {
+      width: 425px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .essentials {
+    width: 375px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .essentials {
+    width: 300px;
+  }
 }
