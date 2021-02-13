@@ -35,9 +35,14 @@ header {
   @media screen and (max-width: 768px) {
     ul {
       display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
       justify-content: center;
       align-items: center;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      align-content: center;
+      li {
+        text-align: center;
+      }
       li a {
         font-size: 1rem;
       }
