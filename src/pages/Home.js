@@ -1,35 +1,80 @@
 import "../styles/Home.scss"
 import me from "../images/me-150x150.jpg"
-import React, { Suspense } from "react";
+import React, { Suspense } from "react"
 import Loader from "../components/Loader"
-const Image = React.lazy(() => import("../components/Image"));
+import Image from "../components/Image"
+import { motion } from "framer-motion"
+
 
 
 const Home = (props) => 
    (
     <>
-      <Suspense fallback={Loader}>
-        <article className={`main-body`}>
-          <h2 className={`main-body-title`}>Welcome to Brian's portfolio!</h2>
-          <Suspense fallback={Loader}>
-            <Image cssName={`pic-of-me`}  src={me} height={`150px`} width={`150px`} alt={`Picture of me`} />
-          </Suspense>
+      <Suspense fallback={<Loader />}>
+        <article className={`container first-body-article`}>
+          <motion.h2 animate={{
+                scale: [0, 1],
+                opacity: [0, 1]}} className={`first-body-article-title`}>Welcome to Brian's portfolio!</motion.h2>
+          <motion.div animate={{
+            scale: [0, 1],
+            rotate: [0, 360],
+            borderRadius: `50%`,
+            opacity: [0, 1]
+          }}>
+            <Image motion={true} cssName={`pic-of-me`}  src={me} height={`150px`} width={`150px`} alt={`Picture of me`} />
+          </motion.div>
         </article>
       </Suspense>
-      <Suspense fallback={Loader}>
-        <article>
-          <h3 className={`tech-list-header`}>Technologies</h3>
+
+      <Suspense fallback={<Loader />}>
+
+      </Suspense>
+
+      <Suspense fallback={<Loader />}>
+        <article className={`second-home-article`}>
           <div className={`icons`}>
-            <div className={`html`}></div>
-            <div className={`css`}></div>
-            <div className={`js`}></div>
-            <div className={`react`}></div>
-            <div className={`node`}></div>
-            <div className={`angularjs`}></div>
+            <Suspense fallback={<Loader />}>
+              <motion.div animate={{
+                scale: [0, 1],
+                rotate: [0, 360],
+                opacity: [0, 1]
+              }} className={`html`}></motion.div>
+            </Suspense>
+            <Suspense fallback={<Loader />}>
+              <motion.div animate={{
+                scale: [0, 1],
+                rotate: [0, 360],
+                opacity: [0, 1]}} className={`css`}></motion.div>
+            </Suspense>
+            <Suspense fallback={<Loader />}>
+              <motion.div animate={{
+                scale: [0, 1],
+                rotate: [0, 360],
+                opacity: [0, 1]}} className={`js`}></motion.div>
+            </Suspense>
+            <Suspense fallback={<Loader />}>
+              <motion.div animate={{
+                scale: [0, 1],
+                rotate: [0, 360],
+                opacity: [0, 1]}} className={`react`}></motion.div>
+            </Suspense>
+            <Suspense fallback={<Loader />}>
+              <motion.div animate={{
+                scale: [0, 1],
+                rotate: [0, 360],
+                opacity: [0, 1]}} className={`node`}></motion.div>
+            </Suspense>
+            <Suspense fallback={<Loader />}>
+              <motion.div animate={{
+                scale: [0, 1],
+                rotate: [0, 360],
+                opacity: [0, 1]}} className={`angularjs`}></motion.div>
+            </Suspense>
           </div>
         </article>
       </Suspense>
     </>
   )
+
 
 export default Home

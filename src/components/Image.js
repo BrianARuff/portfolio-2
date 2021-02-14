@@ -1,6 +1,13 @@
-const Image = ({src, alt, height, width, style, cssName}) => {
+import { Suspense } from "react"
+import Loader from "./Loader"
+
+
+const Image = ({src, alt, height, width, style, cssName, motion}) => {
   return (
-    <img className={cssName} style={style} src={src} alt={alt} height={height} width={width} />
+    <Suspense fallback={<Loader />}>
+      <img  className={cssName} style={style} src={src} alt={alt} height={height} width={width} />
+    </Suspense>
+    
   )
 }
 

@@ -1,9 +1,8 @@
-import "../styles/Spinner.scss"
+import "../styles/Loader.scss"
 
-const Loader = (props) => {
-  return (
+const Loader = (props) => (
     <span className="loader">{props.children}</span>
   )
-}
+
 
 export default Loader

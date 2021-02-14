@@ -6,7 +6,7 @@ import Footer from "./components/Footer"
 import Projects from "./pages/Projects";
 import FlexLayout from "./components/FlexLayout"
 import Resume from "./pages/Resume"
-import {Switch, IndexRoute } from "react-router-dom"
+import { Switch } from "react-router-dom"
 
 function App() {
   return (

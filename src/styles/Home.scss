@@ -1,13 +1,22 @@
-.main-body {
+.first-body-article {
   flex: 0 0 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  padding-top: 40px;
+  padding: 20px;
+  width: 100%;
 }
 
-.main-body-title {
-  text-align: center;
+.first-body-article-title {
+  font-size: 2rem;
+}
+
+.second-home-article {
+  padding: 20px;
+}
+
+.second-home-article {
+  width: 100%;
 }
 
 .pic-of-me {
@@ -24,7 +33,7 @@
 .icons {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: 20px;
   width: 100%;
