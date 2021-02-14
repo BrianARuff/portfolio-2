@@ -4,22 +4,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  .hamburger {
-    display: none;
-  }
   ul {
-    display: grid;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    .gi-1 {
-      position: relative;
-      .pic-of-me {
-        position: absolute;
-        top: 75px;
-        left: 60px;
-      }
-    }
+    flex-wrap: nowrap;
     li {
       list-style-type: none;
       a {
@@ -34,20 +24,8 @@ header {
   }
   @media screen and (max-width: 768px) {
     ul {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      li {
-        text-align: center;
-      }
       li a {
         font-size: 1rem;
-      }
-      .gi-1 {
-        display: none;
       }
     }
   }

@@ -1,6 +1,7 @@
 .flex-layout {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: column nowrap;
+  justify-content: space-between;
   align-items: center;
+  min-height: 80vh;
 }

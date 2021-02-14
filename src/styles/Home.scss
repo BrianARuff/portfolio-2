@@ -1,25 +1,13 @@
 .main-body {
   flex: 0 0 100%;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-flow: column nowrap;
   align-items: center;
   padding-top: 40px;
 }
 
 .main-body-title {
   text-align: center;
-}
-
-.peach {
-  background-color: #eeb266;
-  background: url("../images/peach.svg") no-repeat center center;
-  height: 300px;
-  width: 100%;
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .pic-of-me {
@@ -35,21 +23,57 @@
 
 .icons {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  padding: 7.65rem 0;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
-.essentials {
-  background: url("../images/essential.png") no-repeat center center;
+.html,
+.css,
+.js,
+.node,
+.react,
+.angularjs {
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+}
+
+.html {
+  background: url("../images/html.png") transparent no-repeat center center;
   background-size: contain;
-  height: 375px;
-  width: 876px;
+}
+
+.css {
+  background: url("../images/css.jpg") transparent no-repeat center center;
+  background-size: contain;
+}
+
+.js {
+  background: url("../images/js.png") no-repeat center center;
+  background-size: contain;
+}
+
+.react {
+  background: url("../images/react.png") transparent no-repeat center center;
+  background-size: contain;
+}
+
+.node {
+  background: url("../images/node-js.svg") transparent no-repeat center center;
+  background-size: contain;
+}
+
+.angularjs {
+  background: url("../images/angularjs.png") transparent no-repeat center center;
+  background-size: contain;
 }
 
 @media screen and (max-width: 768px) {
   .essentials {
-    width: 600px;
+    width: 150px;
   }
 
   @media screen and (max-width: 425px) {
