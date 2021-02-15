@@ -11,20 +11,22 @@ const animations = () => {
         opacity: 1,
         transition: {
           duration: 1.5,
-          type: "spring"
+          type: "spring",
+          
         }
       },
       hover: {
         scale: 1.1,
         transition: {
-          repeat : Infinity
+          yoyo : Infinity,
+          duration: 0.3
         }
       },
       
       tap: {
         scale: 1.1,
         transition: {
-          repeat : Infinity
+          yoyo : Infinity
         }
       }
     },
@@ -87,7 +89,6 @@ const animations = () => {
       },
       tap: {
         scale: 1.1,
-
       }
     }
   })

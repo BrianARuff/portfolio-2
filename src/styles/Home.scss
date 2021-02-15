@@ -25,29 +25,9 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  box-shadow: 0px 0px 5px 1px #f8f8f1;
+  border: 1px solid #79c5e4;
+  box-shadow: 0px 0px 8px #e2e0dd;
   margin-top: 60px;
-}
-
-.icons {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.html,
-.css,
-.js,
-.node,
-.react,
-.angularjs,
-.framer {
-  height: 100px;
-  width: 100px;
-  margin: 20px;
 }
 
 .html {
@@ -85,26 +65,95 @@
   background-size: contain;
 }
 
-@media screen and (max-width: 768px) {
-  .essentials {
-    width: 150px;
-  }
-
-  @media screen and (max-width: 425px) {
-    .essentials {
-      width: 425px;
-    }
-  }
+.icons {
+  display: grid;
+  grid-template-columns: repeat(7, 100px);
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+  width: 100%;
 }
 
-@media screen and (max-width: 375px) {
-  .essentials {
-    width: 375px;
+.html,
+.css,
+.js,
+.node,
+.react,
+.angularjs,
+.framer {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .icons {
+    display: grid;
+    grid-template-columns: repeat(7, 75px);
+  }
+  .html,
+  .css,
+  .js,
+  .node,
+  .react,
+  .angularjs,
+  .framer {
+    height: 75px;
+    width: 75px;
+    position: relative;
+    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .essentials {
-    width: 300px;
+  .icons {
+    grid-template-columns: repeat(7, 50px);
+  }
+  .html,
+  .css,
+  .js,
+  .node,
+  .react,
+  .angularjs,
+  .framer {
+    height: 45px;
+    width: 45px;
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .icons {
+    grid-template-columns: repeat(7, 40px);
+  }
+  .html,
+  .css,
+  .js,
+  .node,
+  .react,
+  .angularjs,
+  .framer {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .icons {
+    grid-template-columns: repeat(7, 30px);
+  }
+  .html,
+  .css,
+  .js,
+  .node,
+  .react,
+  .angularjs,
+  .framer {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    margin: 0 auto;
   }
 }

@@ -1,5 +1,5 @@
 header {
-  background-color: #2f4858;
+  background-color: #394a66;
   min-height: 10vh;
   display: flex;
   justify-content: center;
@@ -12,13 +12,26 @@ header {
     flex-wrap: nowrap;
     li {
       list-style-type: none;
+      :hover {
+        color: #79c5e4;
+      }
+      transition: ease;
+      -webkit-transition: ease;
+      -moz-transition: ease;
+      -ms-transition: ease;
+      -o-transition: ease;
       a {
-        color: #f8f1f1;
+        color: #e2e0dd;
         font-size: 2rem;
         text-decoration: none;
       }
       img {
         border-radius: 50%;
+        transition: ease;
+        -webkit-transition: ease;
+        -moz-transition: ease;
+        -ms-transition: ease;
+        -o-transition: ease;
       }
     }
   }
