@@ -1,5 +1,5 @@
 {
-  "short_name": "Brian Ruff Resume",
+  "short_name": "Resume",
   "name": "Brian Ruff's Resume",
   "icons": [
     {
@@ -60,6 +60,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#414f74",
-  "background_color": "#2e4857"
+  "theme_color": "#394A66",
+  "background_color": "#3b72c5"
 }
