@@ -2,8 +2,7 @@ import "../styles/Footer.scss"
 
 const Footer = (props) => {
   return (
-    <footer>
-    </footer>
+    <footer></footer>
   )
 }
 

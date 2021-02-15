@@ -8,7 +8,7 @@
 }
 
 .first-body-article-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .second-home-article {
@@ -25,9 +25,8 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  position: relative;
-  top: 25px;
-  border: 3px solid #404f73;
+  box-shadow: 0px 0px 5px 1px #f8f8f1;
+  margin-top: 60px;
 }
 
 .icons {
@@ -44,7 +43,8 @@
 .js,
 .node,
 .react,
-.angularjs {
+.angularjs,
+.framer {
   height: 100px;
   width: 100px;
   margin: 20px;
@@ -77,6 +77,11 @@
 
 .angularjs {
   background: url("../images/angularjs.png") transparent no-repeat center center;
+  background-size: contain;
+}
+
+.framer {
+  background: url("../images/framer.png") transparent no-repeat center center;
   background-size: contain;
 }
 

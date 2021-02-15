@@ -3,18 +3,54 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 
 
-const Header = (props) => (
+const Header = ({headerItem}) => {
+  
+  return (
     <header>
-      <motion.ul animate={{
-                scale: [0, 1],
-                opacity: [0, 1]}} className={`header-flex-box`}> 
-        <li ><Link className="text-off-white" to={`/`}>Home</Link></li>
-        <li><Link className="text-off-white" to={`/projects`}>Projects</Link></li>
-        <li><Link className="text-off-white" to={`/resume`}>Resumé</Link></li>
-        <li><a href="https://github.com/brianaruff" target="_blank" rel="noreferrer">GitHub</a></li>
-      </motion.ul>
+      <ul className={`header-flex-box`}> 
+        <motion.li
+          initial="hidden"
+          animate="visible"
+          whileHover="hover"
+          whileTap="tap"
+          variants={headerItem}
+        >
+          <Link className="text-off-white" to={`/`}>Home</Link>
+        </motion.li>
+        
+        <motion.li 
+          initial="hidden"
+          animate="visible"
+          whileHover="hover"
+          whileTap="tap"
+          variants={headerItem}
+        >
+          <Link className="text-off-white" to={`/projects`}>Projects</Link>
+        </motion.li>
+        
+        <motion.li
+          initial="hidden"
+          animate="visible"
+          whileHover="hover"
+          whileTap="tap"
+          variants={headerItem}
+        >
+          <Link className="text-off-white" to={`/resume`}>Resumé</Link>
+        </motion.li>
+        
+        <motion.li
+          initial="hidden"
+          animate="visible"
+          whileHover="hover"
+          whileTap="tap"
+          variants={headerItem}
+        >
+          <a href="https://github.com/brianaruff" target="_blank" rel="noreferrer">GitHub</a>
+        </motion.li>
+      </ul>
     </header>
   )
+}
 
 
 export default Header

@@ -1,38 +1,96 @@
 const animations = () => {
   return ({
-    container: {
+
+    headerItem: {
       hidden: {
         scale: 0,
-        opacity: 0,
-        x: "-100vw"
+        opacity: 0
       },
       visible: {
         scale: 1,
         opacity: 1,
-        x: 0
+        transition: {
+          duration: 1.5,
+          type: "spring"
+        }
       },
-      transition: {
-        duration: 3,
-        type: "spring",
-        when: "afterChildren"
-        
+      hover: {
+        scale: 1.1,
+        transition: {
+          yoyo: Infinity
+        }
+      },
+      
+      tap: {
+        scale: 1.1,
+        transition: {
+          yoyo: Infinity
+        }
       }
     },
-    header: {
+
+    bodyHeader: {
       hidden: {
         scale: 0,
         opacity: 0,
       },
       visible: {
         scale: 1,
-        opacity: 1
+        opacity: 1,
+        transition: {
+          duration: 1,
+          type: "spring"
+        }
       },
-      transition: {
-        delay: 0.5,
-        type: "tween",
+      
+    },
+
+    imageLeft: {
+      hidden: {
+        x: `-100vw`
+      },
+      visible: {
+        x: 0,
+        transition: {
+          type: "spring"
+        }
+      }
+    },
+
+    imageRight: {
+      hidden: {
+        x: `100vw`,
+      },
+      visible: {
+        x: 0,
+        transition: {
+          type: "spring"
+        }
+      }
+    },
+
+    imageOfMe: {
+      hidden: {
+        scale: 0,
+        opacity: 0,
+      },
+      visible: {
+        scale: 1,
+        opacity: 1,
+        transition: {
+          duration: 1,
+          type: "spring",
+        }
+      },
+      hover: {
+        scale: 1.1,
+      },
+      tap: {
+        scale: 1.1,
+
       }
     }
   })
 }
 
-export default animations
+export default animations()

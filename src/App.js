@@ -8,25 +8,28 @@ import FlexLayout from "./components/FlexLayout"
 import Resume from "./pages/Resume"
 import { Switch } from "react-router-dom"
 import { useState } from "react";
-import * as animations from "./animations/animations"
+import framer from "./animations/animations"
+
+console.log('%cApp.js line:13 animations', 'color: #007acc;', framer);
 
 function App() {
-  let [animationState, setAnimationState] = useState({animations})
-  
-  setAnimationState = (variant) => {
-    return ({...animationState, ...variant})
-  }
+  let [animationState] = useState({...framer})
+
 
   return (
     <div  className="main-background">
-    <Header />
+    <Header {...animationState} />
     <FlexLayout>
       <Switch>
         <Route exact path="/">
-          <Home animation={animationState} handleSetAnimationState={setAnimationState} />
+          <Home  {...animationState} />
         </Route>
-        <Route path="/resume" component={<Resume />}></Route>>
-        <Route path="/projects" component={<Projects />}></Route>
+        <Route path="/resume">
+          <Resume/>
+        </Route>
+        <Route path="/projects">
+          <Projects />
+        </Route>
       </Switch>
     </FlexLayout>
     <Footer />
