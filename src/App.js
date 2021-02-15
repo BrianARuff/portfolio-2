@@ -15,11 +15,7 @@ function App() {
   let [reposState, setReposState] = useState({});
 
   useEffect(() => {
-    fetch("https://api.github.com/users/brianaruff/repos", {
-      headers: {
-        "Authorization": process.env.gitHubAccessToken
-      }
-    })
+    fetch("https://gh-pinned-repos-5l2i19um3.vercel.app/?username=brianaruff")
     .then(r => r.json() )
     .then(d => setReposState(d))
     .catch(e => console.log(e))
@@ -37,7 +33,7 @@ function App() {
           <Resume/>
         </Route>
         <Route path="/projects">
-          <Projects {...reposState} />
+          <Projects repos={reposState} />
         </Route>
       </Switch>
     </FlexLayout>

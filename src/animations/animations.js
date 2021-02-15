@@ -17,14 +17,14 @@ const animations = () => {
       hover: {
         scale: 1.1,
         transition: {
-          yoyo: Infinity
+          repeat : Infinity
         }
       },
       
       tap: {
         scale: 1.1,
         transition: {
-          yoyo: Infinity
+          repeat : Infinity
         }
       }
     },
