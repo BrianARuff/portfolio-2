@@ -7,14 +7,23 @@ import Projects from "./pages/Projects";
 import FlexLayout from "./components/FlexLayout"
 import Resume from "./pages/Resume"
 import { Switch } from "react-router-dom"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import framer from "./animations/animations"
-
-console.log('%cApp.js line:13 animations', 'color: #007acc;', framer);
 
 function App() {
   let [animationState] = useState({...framer})
+  let [reposState, setReposState] = useState({});
 
+  useEffect(() => {
+    fetch("https://api.github.com/users/brianaruff/repos", {
+      headers: {
+        "Authorization": process.env.gitHubAccessToken
+      }
+    })
+    .then(r => r.json() )
+    .then(d => setReposState(d))
+    .catch(e => console.log(e))
+  }, [])
 
   return (
     <div  className="main-background">
@@ -28,7 +37,7 @@ function App() {
           <Resume/>
         </Route>
         <Route path="/projects">
-          <Projects />
+          <Projects {...reposState} />
         </Route>
       </Switch>
     </FlexLayout>
