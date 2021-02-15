@@ -2,16 +2,16 @@ import {Route} from "react-router-dom";
 import Header from "./components/Header"
 import "./styles/App.scss"
 import Footer from "./components/Footer"
-import Projects from "./pages/Projects";
 import FlexLayout from "./components/FlexLayout"
-import Resume from "./pages/Resume"
 import { Switch } from "react-router-dom"
 import { useState, lazy, Suspense } from "react";
 import framer from "./animations/animations"
-import ErrorBoundary from "./components/ErrorBoundary"
 import Loader from "./components/Loader"
 
 const Home = lazy(() => import("./pages/Home"));
+const Projects = lazy(() => import("./pages/Projects"))
+const Resume = lazy(() => import("./pages/Resume"))
+const ErrorBoundary = lazy(() => import("./components/ErrorBoundary"))
 
 function App() {
   let [animationState] = useState({...framer})
@@ -23,25 +23,22 @@ function App() {
     <FlexLayout>
       <Switch>
         <Route exact path="/">
-          <ErrorBoundary>
             <Suspense fallback={<Loader />}>
               <Home  {...animationState} />
             </Suspense>
-          </ErrorBoundary>   
         </Route>
         <Route path="/resume">
-          <ErrorBoundary>
             <Suspense fallback={<Loader />}>
               <Resume  {...animationState} />
             </Suspense>
-          </ErrorBoundary>
         </Route>
         <Route path="/projects">
-          <ErrorBoundary>
             <Suspense fallback={<Loader />}>
-              <Projects  {...animationState} />
+              <ErrorBoundary>
+                <Projects  {...animationState} />
+              </ErrorBoundary>
+              
             </Suspense>
-          </ErrorBoundary>
         </Route>
       </Switch>
     </FlexLayout>
