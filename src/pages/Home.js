@@ -5,16 +5,19 @@ import Loader from "../components/Loader"
 import Image from "../components/Image"
 import { motion } from "framer-motion"
 
-
-
-const Home = (props) => 
+const Home = ({animation, handleSetAnimationState}) =>
    (
     <>
       <Suspense fallback={<Loader />}>
-        <article className={`container first-body-article`}>
-          <motion.h2 animate={{
-                scale: [0, 1],
-                opacity: [0, 1]}} className={`first-body-article-title`}>Welcome to Brian's portfolio!</motion.h2>
+        <article initial="hidden"
+            animate="visible"
+            variants={animation.container} className={`container first-body-article`}>
+          <motion.h2
+            initial="hidden"
+            animate="visible"
+            variants={animation.header} 
+            className={`first-body-article-title`}>Welcome to Brian's portfolio!
+          </motion.h2>
           <motion.div animate={{
             scale: [0, 1],
             rotate: [0, 360],
