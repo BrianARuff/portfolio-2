@@ -30,6 +30,6 @@
   "include": [
     "./src/**/*.tsx",
     "./src/**/*.ts",
-    "src/types"
+    "src/types" 
   ]
 }

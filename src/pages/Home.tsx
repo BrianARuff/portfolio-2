@@ -11,7 +11,7 @@ type HEADER = {
   }
 }
 
-const Home = ({animations}:HEADER) => {
+const Home = ({animations}:HEADER):JSX.Element => {
   return (
       <>
           <article
@@ -22,7 +22,7 @@ const Home = ({animations}:HEADER) => {
               variants={animations.bodyHeader} 
               className={`first-body-article-title`}>Welcome to Brian's portfolio!
             </motion.h2>
-              <motion.img 
+            <motion.img 
                 initial="hidden"
                 animate="visible"
                 variants={animations.imageOfMe} 
@@ -33,11 +33,11 @@ const Home = ({animations}:HEADER) => {
                 src={me} 
                 alt="pic of me" 
                 className={`pic-of-me`}
-              >
-              </motion.img>
+            >
+            </motion.img>
           </article>
 
-          <div>
+          <article className={`container`}>
             <h3>Under Development</h3>
             <motion.div 
               animate={{
@@ -47,7 +47,7 @@ const Home = ({animations}:HEADER) => {
               }}
               transition={{repeat: Infinity, duration: 3, ease: "linear"}} className={`react`}>
             </motion.div>
-          </div>
+          </article>
   
           <motion.article 
             initial="hidden"
