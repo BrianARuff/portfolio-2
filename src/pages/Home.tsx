@@ -1,8 +1,9 @@
 import "../styles/Home.scss"
 import { motion } from "framer-motion"
 import me from "../images/me-150x150.jpg"
+import { FunctionComponent } from "react"
 
-type HEADER = {
+type Props = {
   animations: {
     bodyHeader: {},
     imageOfMe: {},
@@ -11,7 +12,7 @@ type HEADER = {
   }
 }
 
-const Home = ({animations}:HEADER):JSX.Element => {
+const Home: FunctionComponent<Props> = ({animations}) => {
   return (
       <>
           <article

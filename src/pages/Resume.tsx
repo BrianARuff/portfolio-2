@@ -1,6 +1,6 @@
+import { FunctionComponent } from "react"
 
-
-const Resume = ():JSX.Element => {
+const Resume: FunctionComponent = () => {
   return (
     <h1>Resume</h1>
   )
