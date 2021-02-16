@@ -1,6 +1,6 @@
 import "../styles/Footer.scss"
 
-const Footer = (props) => {
+const Footer = () => {
   return (
     <footer></footer>
   )

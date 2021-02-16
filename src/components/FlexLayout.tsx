@@ -1,6 +1,11 @@
+import React from "react"
 import "../styles/FlexLayout.scss"
 
-const FlexLayout = (props) => (
+type FLEXLAYOUT = {
+  children: object
+}
+
+const FlexLayout = (props:FLEXLAYOUT) => (
     <div className={`flex-layout`}>
       {props.children}
     </div>

@@ -18,7 +18,8 @@ const animations = () => {
       hover: {
         scale: 1.1,
         transition: {
-          yoyo : Infinity,
+          repeat : Infinity,
+          repeatType: "reverse",
           duration: 0.3
         }
       },
@@ -26,7 +27,9 @@ const animations = () => {
       tap: {
         scale: 1.1,
         transition: {
-          yoyo : Infinity
+          repeat : Infinity,
+          repeatType: "reverse",
+          duration: 0.3
         }
       }
     },

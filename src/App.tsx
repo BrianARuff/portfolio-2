@@ -1,11 +1,13 @@
 import {Route} from "react-router-dom";
-import Header from "./components/Header"
-import "./styles/App.scss"
-import Footer from "./components/Footer"
-import FlexLayout from "./components/FlexLayout"
 import { Switch } from "react-router-dom"
 import { useState, lazy, Suspense } from "react";
+
 import framer from "./animations/animations"
+import "./styles/App.scss"
+
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import FlexLayout from "./components/FlexLayout"
 import Loader from "./components/Loader"
 
 const Home = lazy(() => import("./pages/Home"));
@@ -19,25 +21,29 @@ function App() {
 
   return (
     <div  className="main-background">
-    <Header {...animationState} />
+    <Header animations={animationState} />
     <FlexLayout>
       <Switch>
         <Route exact path="/">
             <Suspense fallback={<Loader />}>
-              <Home  {...animationState} />
+              <ErrorBoundary>
+                <Home animations={animationState} />
+              </ErrorBoundary>
             </Suspense>
         </Route>
         <Route path="/resume">
             <Suspense fallback={<Loader />}>
-              <Resume  {...animationState} />
+              <ErrorBoundary>
+                <Resume />
+              </ErrorBoundary>
+              
             </Suspense>
         </Route>
         <Route path="/projects">
             <Suspense fallback={<Loader />}>
-              <ErrorBoundary>
-                <Projects  {...animationState} />
-              </ErrorBoundary>
-              
+                <ErrorBoundary>
+                  <Projects />
+                </ErrorBoundary>              
             </Suspense>
         </Route>
       </Switch>
