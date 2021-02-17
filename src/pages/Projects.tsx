@@ -1,7 +1,7 @@
 import{ FunctionComponent, useState, useEffect, lazy, Suspense } from "react";
 import * as React from "react";
 import "../styles/Projects.scss"
-import useGetRepos from "../components/getRepos"
+import useGetRepos from "../components/useGetRepos"
 import Loader from "../components/Loader";
 
 const Projects: FunctionComponent = () => {
