@@ -1,24 +1,10 @@
-import{ FunctionComponent, useState, useEffect } from "react";
+import{ FunctionComponent, useState, useEffect, lazy, Suspense } from "react";
 import * as React from "react";
-import axios from "axios"
 import "../styles/Projects.scss"
-
-type Repo = {
-  owner: string,
-  repo: string,
-  link: string,
-}
+import useGetRepos from "../components/getRepos"
+import Loader from "../components/Loader";
 
 const Projects: FunctionComponent = () => {
-
-  const [pinnedRepos, setPinnedRepos] = useState<Repo[]>([]);
-  useEffect(() => {
-    axios.get("https://gh-pinned-repos-5l2i19um3.vercel.app/?username=brianaruff")
-      .then(res => {
-        setPinnedRepos(res.data);
-      })
-      .catch(err => console.error(err));
-  }, [])
 
   return (
     <div className={`projects`}>
@@ -26,10 +12,13 @@ const Projects: FunctionComponent = () => {
       </div>
       <div className={`projects-repos`}>
         <h3>Pinned Github Repositories</h3>
+        
         {
-          pinnedRepos.map(({link, owner, repo}) => {
+          useGetRepos().map(({link, owner, repo}) => {
             return (
-              <li key={Math.random()}><a href={link}>{repo}</a></li>
+              <Suspense fallback={<Loader/>} key={link}>
+                <li ><a href={link}>{repo}</a></li>
+              </Suspense>
             )
           })
         }
