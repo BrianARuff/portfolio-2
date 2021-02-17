@@ -8,10 +8,10 @@ type User = {
   repo: string
 }
 
-const useGetRepos = ():User[] => {
-  const [pinnedRepos, setPinnedRepos] = useState([])
+const useGetRepos = () => {
+  const [pinnedRepos, setPinnedRepos] = useState<User[]>([])
   useEffect(() => {
-    axios.get("https://gh-pinned-repos-5l2i19um3.vercel.app/?username=brianaruff")
+    axios.get<User[]>("https://gh-pinned-repos-5l2i19um3.vercel.app/?username=brianaruff")
       .then(res => {
         setPinnedRepos(res.data);
       })

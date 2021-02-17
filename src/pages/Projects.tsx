@@ -12,16 +12,17 @@ const Projects: FunctionComponent = () => {
       </div>
       <div className={`projects-repos`}>
         <h3>Pinned Github Repositories</h3>
-        
+        <Suspense fallback={<Loader/>} >
         {
           useGetRepos().map(({link, owner, repo}) => {
             return (
-              <Suspense fallback={<Loader/>} key={link}>
-                <li ><a href={link}>{repo}</a></li>
-              </Suspense>
+              
+                <li key={link} ><a href={link}>{repo}</a></li>
+              
             )
           })
         }
+        </Suspense>
       </div>
       <div className={`projects-packages`}></div>
     </div>
