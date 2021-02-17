@@ -8,20 +8,21 @@ const Projects: FunctionComponent = () => {
 
   return (
     <div className={`projects`}>
-      <div className={`projects-websites`}>
-      </div>
+      <div className={`projects-websites`}></div>
       <div className={`projects-repos`}>
         <h3>Pinned Github Repositories</h3>
         <Suspense fallback={<Loader/>} >
-        {
+          <ol>
+          {
           useGetRepos().map(({link, owner, repo}) => {
             return (
-              
-                <li key={link} ><a href={link}>{repo}</a></li>
-              
+                <li key={link} >
+                  <a href={link}>{repo}</a>
+                </li>
             )
           })
         }
+          </ol>
         </Suspense>
       </div>
       <div className={`projects-packages`}></div>
