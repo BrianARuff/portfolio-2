@@ -10,7 +10,6 @@ type HEADER = {
 }
 
 const Header = ({animations}:HEADER) => {
-  console.log('%cHeader.tsx line:12 props', 'color: #007acc;', animations);
   return (
     <header>
       <ul className={`header-flex-box`}> 

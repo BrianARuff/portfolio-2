@@ -1,3 +1,4 @@
+import * as React from "react";
 import "../styles/Home.scss"
 import { motion } from "framer-motion"
 import me from "../images/me-150x150.jpg"
@@ -12,7 +13,7 @@ type Props = {
   }
 }
 
-const Home: FunctionComponent<Props> = ({animations}) => {
+const Home = ({animations}:Props) => {
   return (
       <>
           <article
@@ -21,7 +22,7 @@ const Home: FunctionComponent<Props> = ({animations}) => {
               initial="hidden"
               animate="visible"
               variants={animations.bodyHeader} 
-              className={`first-body-article-title`}>Welcome to Brian's portfolio!
+              className={`first-body-article-title`}>Welcome to Brian&apos;s portfolio!
             </motion.h2>
             <motion.img 
                 initial="hidden"

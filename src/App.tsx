@@ -1,8 +1,9 @@
+import * as React from "react";
+import { useState, lazy, Suspense } from "react"
 import {Route} from "react-router-dom";
 import { Switch } from "react-router-dom"
-import { useState, lazy, Suspense } from "react";
 
-import framer from "./animations/animations"
+import framerVariants from "./animations/animations"
 import "./styles/App.scss"
 
 import Header from "./components/Header"
@@ -15,8 +16,12 @@ const Projects = lazy(() => import("./pages/Projects"))
 const Resume = lazy(() => import("./pages/Resume"))
 const ErrorBoundary = lazy(() => import("./components/ErrorBoundary"))
 
+function initializeState() {
+  return framerVariants;
+}
+
 function App() {
-  let [animationState] = useState({...framer})
+  let [animationState] = useState(initializeState())
 
 
   return (

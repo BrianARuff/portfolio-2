@@ -1,8 +1,8 @@
-import { FunctionComponent } from "react"
+import React, { FunctionComponent } from "react"
 
 const Resume: FunctionComponent = () => {
   return (
-    <h1>Resume</h1>
+    <h2>Resume</h2>
   )
 }
 
