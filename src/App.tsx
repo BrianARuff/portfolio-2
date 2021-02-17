@@ -41,7 +41,6 @@ function App() {
               <ErrorBoundary>
                 <Resume />
               </ErrorBoundary>
-              
             </Suspense>
         </Route>
         <Route path="/projects">
@@ -53,7 +52,7 @@ function App() {
         </Route>
       </Switch>
     </FlexLayout>
-    <Footer />
+    {/* <Footer /> */}
     </div>
   );
 }
